@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10233f">
+  <title>Intranet | Portal Corporativo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">N</div>
+        <div><strong>NEXA</strong><span>PORTAL CORPORATIVO</span></div>
+      </div>
+
+      <div class="workspace-label">ESPACIO DE TRABAJO</div>
+      <nav class="nav" aria-label="Navegación principal">
+        <button class="nav-item active" data-page="inicio">
+          <span>▦</span> Panel principal
+        </button>
+        <button class="nav-item" data-page="manuales">
+          <span>▤</span> Manuales técnicos <em id="manualCount">4</em></button>
+        <button class="nav-item" data-page="calidad">
+          <span>✓</span> Matrices de calidad
+        </button>
+        <button class="nav-item" data-page="actas">
+          <span>▧</span> Actas y reuniones
+        </button>
+        <button class="nav-item" data-page="rankings">
+          <span>▥</span> Rankings quincenales
+        </button>
+        <button class="nav-item" data-page="cierres">
+          <span>◷</span> Historial de cierres
+        </button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <div class="help-icon">?</div>
+          <strong>¿Necesitas ayuda?</strong>
+          <p>Consulta los manuales o registra una novedad con tu equipo de soporte.</p>
+          <button data-page="manuales" class="small-light">Ver manuales</button>
+        </div>
+        <div class="profile">
+          <div class="avatar">AD</div>
+          <div class="profile-info">
+            <strong>Administrador Demo</strong>
+            <span>Vista de demostración</span>
+          </div>
+          <span class="dots">•••</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button id="menuToggle" class="icon-button mobile-menu" aria-label="Abrir menú">☰</button>
+        <div class="breadcrumbs">
+          <span>Portal interno</span>
+          <b>/</b>
+          <strong id="crumb">Panel principal</strong>
+        </div>
+        <div class="top-actions">
+          <label class="global-search">
+            <span>⌕</span>
+            <input id="globalSearch" placeholder="Buscar en la intranet..." aria-label="Buscar en la intranet">
+            <kbd>Ctrl K</kbd>
+          </label>
+          <button class="icon-button notification" aria-label="Notificaciones">♧<i></i></button>
+          <div class="top-avatar">AD</div>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="page-heading">
+          <div><p class="eyebrow" id="todayLabel">PORTAL INTERNO</p>
+            <h1 id="pageTitle">Buenos días, equipo <span>✦</span></h1>
+            <p class="subtitle" id="pageSubtitle">Todo lo que necesitas para trabajar, en un solo lugar.</p>
+          </div>
+          <button class="primary-button" id="quickAdd">＋ <span id="quickAddText">Crear registro</span></button>
+        </div>
+
+        <section class="page-view" id="page-inicio">
+          <div class="welcome-banner">
+            <div class="welcome-copy"><span class="banner-chip">ESPACIO DE TRABAJO</span>
+              <h2>Un equipo conectado,<br>un mejor resultado.</h2>
+              <p>Accede a las herramientas, documentos y novedades de tu operación.</p>
+              <button class="banner-button" data-page="manuales">Explorar recursos <span>→</span></button>
+            </div>
+            <div class="banner-art" aria-hidden="true">
+              <div class="orb orb-one"></div>
+              <div class="orb orb-two"></div>
+              <div class="art-card">
+                <div class="art-card-top"><span>RESUMEN OPERATIVO</span>
+                  <span class="live-dot">● EN LÍNEA</span>
+                </div>
+                <div class="art-bars">
+                  <i style="height:40%"></i>
+                  <i style="height:62%"></i>
+                  <i style="height:48%"></i>
+                  <i style="height:77%"></i>
+                  <i style="height:58%"></i>
+                  <i style="height:92%"></i>
+                  <i style="height:70%"></i>
+                  <i style="height:84%"></i>
+                </div>
+                <div class="art-line">
+                  <span>Actividad del equipo</span>
+                  <strong>Actualizado</strong>
+                </div>
+              </div></div>
+          </div>
+          <div class="section-title-row"><div>
+            <h2>Vista general</h2>
+            <p>Accesos y registros de la intranet</p>
+          </div><span class="period-pill">
+            <span class="green-dot"></span> Entorno de demostración</span>
+          </div>
+          <div class="stats-grid">
+            <article class="stat-card">
+              <div class="stat-top">
+                <span class="stat-icon blue">▤</span>
+                <span class="stat-trend">Recursos</span>
+              </div>
+              <div class="stat-number" id="statManuals">4</div>
+              <div class="stat-label">Manuales técnicos</div>
+              <div class="stat-foot">Guías para resolver incidencias</div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-top">
+                <span class="stat-icon purple">✓</span>
+                <span class="stat-trend">Calidad</span>
+              </div>
+              <div class="stat-number" id="statQuality">3</div>
+              <div class="stat-label">Matrices disponibles</div>
+              <div class="stat-foot">Documentación de referencia</div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-top">
+                <span class="stat-icon orange">▧</span>
+                <span class="stat-trend">Seguimiento</span>
+              </div>
+              <div class="stat-number" id="statMinutes">2</div>
+              <div class="stat-label">Actas registradas</div>
+              <div class="stat-foot">Acuerdos y compromisos</div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-top">
+                <span class="stat-icon green">◷</span>
+                <span class="stat-trend">Operación</span>
+              </div>
+              <div class="stat-number" id="statClosures">2</div>
+              <div class="stat-label">Cierres registrados</div>
+              <div class="stat-foot">Trazabilidad operativa</div>
+            </article>
+          </div>
+          <div class="dashboard-grid">
+            <section class="panel quick-panel">
+              <div class="panel-heading">
+                <div>
+                  <h2>Accesos rápidos</h2>
+                  <p>Entra directamente a un módulo</p>
+                </div>
+                <span class="heading-symbol">↗</span>
+              </div>
+              <div class="quick-links">
+              <button data-page="manuales" class="quick-link">
+                <span class="quick-icon q-blue">▤</span>
+                <span>
+                  <strong>Manuales técnicos</strong>
+                  <small>Guías y soluciones de TI</small>
+                </span><b>→</b>
+              </button>
+              <button data-page="calidad" class="quick-link">
+                <span class="quick-icon q-purple">✓</span>
+                <span>
+                  <strong>Matrices de calidad</strong>
+                  <small>Criterios y documentos</small>
+                </span><b>→</b>
+              </button>
+              <button data-page="actas" class="quick-link">
+                <span class="quick-icon q-orange">▧</span>
+                <span><strong>Actas y reuniones</strong>
+                  <small>Compromisos y responsables</small>
+                </span><b>→</b>
+              </button>
+              <button data-page="rankings" class="quick-link">
+                <span class="quick-icon q-green">▥</span>
+                <span><strong>Rankings quincenales</strong>
+                  <small>Informes de desempeño</small>
+                </span><b>→</b>
+              </button>
+            </div></section>
+            <section class="panel activity-panel">
+              <div class="panel-heading">
+                <div>
+                  <h2>Actividad reciente</h2>
+                  <p>Últimos registros de ejemplo</p>
+                </div>
+                <button class="text-button" data-page="cierres">Ver historial →</button>
+              </div>
+              <div class="activity-list" id="recentActivity"></div>
+            </section>
+          </div>
+          <div class="notice-strip">
+            <span class="notice-symbol">i</span>
+            <div>
+              <strong>Importante: información de demostración</strong>
+              <p>Los registros se guardan en este navegador. No cargues información confidencial ni datos reales de clientes o empleados.</p>
+            </div></div>
+        </section>
+
+        <section class="page-view hidden" id="page-manuales"></section>
+        <section class="page-view hidden" id="page-calidad"></section>
+        <section class="page-view hidden" id="page-actas"></section>
+        <section class="page-view hidden" id="page-rankings"></section>
+        <section class="page-view hidden" id="page-cierres"></section>
+        <footer class="footer">
+          <span>© 2026 Nexa · Portal corporativo</span>
+          <span>Versión inicial · Entorno de demostración</span>
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <form class="modal" id="recordForm">
+      <div class="modal-header"><div>
+        <p class="eyebrow">GESTIÓN DE INFORMACIÓN</p>
+        <h2 id="modalTitle">Crear registro</h2>
+      </div>
+      <button type="button" class="icon-button" id="closeModal" aria-label="Cerrar">×</button></div>
+      <p class="modal-description" id="modalDescription">Completa los campos para agregar un registro a la demostración.</p>
+      <label class="field-label" for="recordTitle">Título <span>*</span></label>
+      <input id="recordTitle" name="title" required maxlength="100" placeholder="Ej. Guía de conexión VPN">
+      <label class="field-label" for="recordCategory">Categoría</label>
+      <select id="recordCategory" name="category"><option>Soporte TI</option><option>Calidad</option><option>Reunión</option><option>Desempeño</option><option>Cierre operativo</option><option>General</option></select>
+      <label class="field-label" for="recordDate">Fecha</label>
+      <input id="recordDate" name="date" type="date">
+      <label class="field-label" for="recordDescription">Descripción / observaciones</label>
+      <textarea id="recordDescription" name="description" rows="3" maxlength="500" placeholder="Añade detalles útiles para el equipo..."></textarea>
+      <div class="modal-actions">
+        <button type="button" class="secondary-button" id="cancelModal">Cancelar</button>
+        <button type="submit" class="primary-button">Guardar registro</button>
+      </div>
+    </form>
+  </div>
+  <div class="toast hidden" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
